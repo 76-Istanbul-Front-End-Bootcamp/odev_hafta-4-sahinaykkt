@@ -46,7 +46,7 @@ calculateButton.addEventListener("click", function () {
     }
 
     if (!fromTarget && !toTarget) {
-        return alert("Please choose currencies from and to.");
+        return alert("Please make currency selection.");
     }
     if (!fromTarget) {
         return alert("Please choose currency from.");
