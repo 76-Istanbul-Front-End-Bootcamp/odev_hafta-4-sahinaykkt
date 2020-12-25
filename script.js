@@ -42,24 +42,24 @@ calculateButton.addEventListener("click", function () {
     const amount = document.querySelector("input[name='amount']").value;
 
     if (isNaN(amount)) {
-        return alert("Please enter a  valid number.");
+        return new Toast("Please enter a  valid number.");
     }
 
     if (!fromTarget && !toTarget) {
-        return alert("Please make currency selection.");
+        return new Toast("Please make currency selection.");
     }
     if (!fromTarget) {
-        return alert("Please choose currency from.");
+        return new Toast("Please choose currency from.");
     }
     if (!toTarget) {
-        return alert("Please choose currency to.");
+        return new Toast("Please choose currency to.");
     }
 
     const fromTargetValue = document.querySelector("input[name='currency_from']:checked").value;
     const toTargetValue = document.querySelector("input[name='currency_to']:checked").value;
 
     if (fromTargetValue == toTargetValue) {
-        return alert("Please choose different currencies.");
+        return new Toast("Please choose different currencies.");
     }
 
     const currentCurrencyObject = data[fromTargetValue];
